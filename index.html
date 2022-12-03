@@ -23,16 +23,29 @@
 
         <h2 id="Introduction">Introduction:</h2>
         <p>When we think of circuits, we usually hold a picture of bulbs and wires in our heads, but circuits can also be made with cells. Though artificial circuits made of cells were designed only in the past century, intrinsic cellular mechanisms resemble artificial logical circuits in many ways. For instance, from a macro point of view, when blood glucose levels are elevated after a meal, beta cells in the pancreas produce and secrete insulin to accelerate insulin intake by other cells, consequently restoring blood glucose to a normal level. The mechanism described above is an example of the biological circuit, and the artificial manipulation of such biological circuitry is a sub-branch of synthetic biology that focuses on performing logical operations that are previously carried out in electronic circuits. Biological circuits can be divided into two categories, molecular circuits that perform logical operations at the molecular levels in terms of DNA, RNA, and proteins, and cell circuits that mainly operate at the scale of cells. The two levels of biological circuitry are not independent, as the intrinsic cellular activity of any given cell is dependent on intracellular activities, and vice versa. Considering the example of blood glucose regulation again, the mechanism is both molecular for insulin is produced and taken by individual cells, and cellular because cell-to-cell communication is a necessary component of the regulation.</p>
-        <center><p style="color:red">[IMG]</p></center>
+        <center><figure class="figure">
+          <img src="images/image1.png" class="figure-img img-fluid rounded">
+          <figcaption class="figure-caption">Image credit: <a href="https://www.youtube.com/watch?v=uqOLAEmS0Mg">https://www.youtube.com/watch?v=uqOLAEmS0Mg</a></figcaption>
+        </figure></center>
         <br>
 
         <h2 id="History">History:</h2>
         <p>One of the most studied and illustrated natural circuits is the lac operon by French biochemists Jacques Monod and Francois Jacob, who discovered the “switch” mechanism in <i>E. coli</i> that enables the bacteria to preferentially consume glucose than lactose, when the former and more digestive sugar is present <sup><a href="#R1">[1]</a></sup>. During their study of gene expression levels in <i>E. coli</i>, they discovered that five genes responsible for the production of the amino acid tryptophan are arranged in a cluster on the bacteria’s genome. This arrangement, later defined as operon, allows the clustered genes to be activated by the same signal and transcribed as a group. Monod and Jacob further developed the Jacob-Monod model in an attempt to describe the mechanism of operons, dividing the operon structure into 4 parts consisting of structural genes (genes that are later transcribed to functional protein), operator (regulatory region of the genome that serves as the binding site for repressor), promoter (regulatory region of the genome that serves as the binding site for RNA polymerase to start transcription), and repressor (a protein that inhibits transcription of the structural genes). As we will see later, the operon system is frequently employed in both natural and artificial biological circuits.</p>
-        <center><p style="color:red">[IMG]</p></center>
+        <center><figure class="figure">
+          <img src="images/image2.png" class="figure-img img-fluid rounded">
+          <figcaption class="figure-caption">Image credit: <a href="https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation/regulation-of-gene-expression-and-cell-specialization/a/the-lac-operon">Khan Academy</a></figcaption>
+        </figure></center>
         <p>The lac operon system is an inducible system, in which the repressor is normally bonded to the operator region to inhibit the transcription of the structural genes, which in this case is lactase, the enzyme that metabolizes lactose. In order to deactivate the repressor, an inducer must connect to the repressor to break its connection from the operator region and allow efficient transcription of the lactase. The described inducible system allows <i>E. coli</i> to produce lactase only when it is needed, since the digestion of glucose (a monosaccharide, a basic form of sugar) is much more energetically efficient than the digestion of lactose (a disaccharide, which is two monosaccharides connected by glycosidic bond). Monod and Jacob later shared the 1965 Nobel Prize for their study.</p>
         <p>In comparison to the intrinsic biological circuitry in organisms that have continued to evolve for billions of years, artificial biological circuits have a much shorter but fast-developing history. In 2000, Elowitz and Leibler used three transcriptional repressor genes to build an oscillating network, termed the repressilator, that exhibits a stable oscillator with fixed oscillation periods that mimics an electrical oscillator system <sup><a href="#R2">[2]</a></sup>. The oscillation mechanism in the repressilator is achieved by a feedback loop, in which the expression of each gene activates the expression of the next gene in the loop. In the same year, Gardner and Collins designed and constructed a genetic toggle switch system consisting of two mutually repressible promoter-repressor systems <sup><a href="#R3">[3]</a></sup>. The two stable states of the toggle switch system are the low state, during which repressor 2 is transcribed and repressor 1 is repressed, and the high state, during which repressor 1 is transcribed and repressor 2 is repressed. Gardener and Collins show that the system is able to successfully switch states by change in temperature or addition of transient chemicals.</p>
-        <center><p style="color:red">[IMG]</p></center>
-        <center><p style="color:red">[IMG]</p></center>
+        <center><figure class="figure">
+          <img src="images/image3.png" class="figure-img img-fluid rounded">
+          <figcaption class="figure-caption">Image credit: <a href="#R2">[2]</a></figcaption>
+        </figure></center>
+        <br>
+        <center><figure class="figure">
+          <img src="images/image4.png" class="figure-img img-fluid rounded">
+          <figcaption class="figure-caption">Image credit: <a href="#R3">[3]</a></figcaption>
+        </figure></center>
         <br>
 
         <h2 id="Designing">Designing Biological Circuits:</h2>
@@ -50,10 +63,18 @@
         <h2 id="Transcriptional">Transcriptional Logic Gates:</h2>
         <p>One method for creating basic circuitry in living cells is to take advantage of transcriptional interference, which changes how DNA is translated into RNA by the cell. This method can be used to control how different genes are expressed, such as by ending transcription early to suppress a gene, which allows the behavior of the cell to be changed <sup><a href="#R5">[5]</a></sup>. By carefully selecting and designing transcription factors which bind to specific sequences in the DNA, it is possible to create predictable effects which emulate the functionality of a basic logic gate, allowing the cell to respond to specific environmental factors. This makes it much more feasible to attempt to design larger or more complicated biological circuits, as it allows for a more modular design process.</p>
         <p>An example of this process can be seen by constructing a NAND gate using an AND gate and a NOT gate <sup><a href="#R6">[6]</a></sup>. The first step is to create the individual AND and NOT gates. An example construction of an AND gate is shown below.</p>
-        <center><p style="color:red">[IMG]</p></center>
+        </figure></center>
+        <center><figure class="figure">
+          <img src="images/image5.png" class="figure-img img-fluid rounded">
+          <figcaption class="figure-caption">Image credit: <a href="#R6">[6]</a></figcaption>
+        </figure></center>
         <p>Inputs are given to the gate by reacting to specific small molecules in the environment which control two promoters (P<sub>1</sub> and P<sub>2</sub>), which controls whether or not the <i>hrpR</i> and <i>hrpS</i> genes will be transcribed. The transcription of the output promoter for <i>hrpL</i> will only occur if both <i>hrpR</i> and <i>hrpS</i> genes are present, as they are required to bind the upstream activator sequence to open the <i>hrpL</i> transcription complex through ATP hydrolysis.</p>
         <p>A NOT gate can be designed in a similar fashion, using the same method for accepting input to the gate. In the example NOT gate shown below, the presence of the input gene is used along with a repressor module to invert the output.</p>
-        <center><p style="color:red">[IMG]</p></center>
+        </figure></center>
+        <center><figure class="figure">
+          <img src="images/image6.png" class="figure-img img-fluid rounded">
+          <figcaption class="figure-caption">Image credit: <a href="#R6">[6]</a></figcaption>
+        </figure></center>
         <p>These two gates can then be placed in series, creating a functional NAND gate. By combining these NAND gates in different ways, a number of combinatorial circuits can be designed.</p>
         <br>
 
@@ -65,7 +86,11 @@
 
         <h2 id="Electrical">How Biological Circuits Link With Electrical Circuits:</h2>
         <p>Everything from the very core of biology, starting at single cellular bodies, consists of molecular interactions which all are represented by intricate, large-scale networks in order to produce any type of biological circuits and systems. These networks are extremely difficult to interpret due to both the complexity of each biochemical pathway, and the links between these pathways creating interactions too compounded to compute through non-electrical solutions. So far we have dived into designing these circuits and specific advancements into helping create them as well. However, it has been proven difficult to actually attempt to design these biological circuits by linking them up with electrical circuits. One intriguing, yet viable solution brought to help decipher these circuits is examined by a paper, <i>The Merging of Biological and Electronic Circuits</i>, by Teo and Sarpeshkar which explores the usage of a four-pronged method where merging biology and electronics can help quicken analyze biological systems with room for less error. It is our hope that this information will help engineers create a blueprint or a draft representation of how to properly design these circuits <sup><a href="#R8">[8]</a></sup>.</p>
-        <center><p style="color:red">[IMG]</p></center>
+        </figure></center>
+        <center><figure class="figure">
+          <img src="images/image7.png" class="figure-img img-fluid rounded">
+          <figcaption class="figure-caption">Image credit: <a href="#8">[8]</a></figcaption>
+        </figure></center>
         <h4>Mapping Biological Interactions to Electronic Circuits</h4>
         <p>The first step to conduct merging biological and electronic circuits is to map them out using ordinary differential equations. These equations are then illustrated at the DNA, RNA, protein, and small-molecule levels, which is given as an example of an enzyme-substrate (ES) binding reaction. In this example, we are given equations depicting the association of E and S and other mathematical data. We then picture/draw the canonical analog circuit representing the molecular biological circuits, and combining both that and the equations, ultimately provide an easier time for feedback, dynamics, robustness, and noise without mass calculations. Depending on the design used for the biological circuit, we can study its schematic equivalent using analytical tools from its design to uncover the specific properties of the circuit.</p>
         <h4>Electronic Software for Bio Circuit Design</h4>
